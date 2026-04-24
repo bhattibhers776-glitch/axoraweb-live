@@ -35,7 +35,8 @@ const Buildsection = () => {
 
   return (
     <section className="w-full bg-white pt-14 py-20 overflow-hidden font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Fixed Width for 1700px alignment */}
+      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-blue-200 bg-blue-50 text-blue-500 shadow-sm">
@@ -51,15 +52,15 @@ const Buildsection = () => {
           Our proven 4-step process delivers scalable, high-performance applications. We don't just write code; we engineer solutions.
         </p>
 
-        {/* --- MOBILE VIEW: Vertical Timeline (Based on your Image) --- */}
-        <div className="mt-16 relative md:hidden text-left px-2">
+        {/* --- MOBILE & TABLET VIEW (Up to 1024px): Vertical Timeline --- */}
+        {/* 768px (md) par ab ye full-width vertical timeline dikhayega */}
+        <div className="mt-16 relative lg:hidden text-left px-2 max-w-2xl mx-auto">
           {/* Vertical Line */}
           <div className="absolute left-[30px] top-6 bottom-6 w-[2px] bg-blue-500 z-0"></div>
 
           <div className="space-y-12">
             {steps.map((step, idx) => (
               <div key={idx} className="relative z-10 flex gap-5 items-start">
-                {/* Icon & Number */}
                 <div className="relative flex-shrink-0">
                    <span className="absolute -top-2 -right-1 bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-20 border-2 border-white">
                       {step.id}
@@ -69,12 +70,10 @@ const Buildsection = () => {
                   </div>
                 </div>
 
-                {/* Content Area */}
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900 leading-tight">{step.title}</h3>
                   <p className="text-gray-600 mt-2 text-sm leading-relaxed">{step.description}</p>
                   
-                  {/* Action Card (Niche wala box) */}
                   <div className="bg-slate-100 py-5 px-6 rounded-2xl border border-blue-300 mt-5">
                     <ul className="space-y-3">
                       {step.features.map((feature, fIdx) => (
@@ -91,11 +90,11 @@ const Buildsection = () => {
           </div>
         </div>
 
-        {/* --- DESKTOP VIEW: Horizontal Grid (Original Style) --- */}
-        <div className="mt-12 relative hidden md:block">
+        {/* --- DESKTOP VIEW (1024px+): Horizontal Grid --- */}
+        <div className="mt-12 relative hidden lg:block">
           <div className="absolute top-10 left-0 w-full h-[2px] bg-blue-100 z-0"></div>
           
-          <div className="grid md:grid-cols-4 gap-12 text-center mt-12 relative z-10">
+          <div className="grid lg:grid-cols-4 gap-12 text-center mt-12 relative z-10">
             {steps.map((step, idx) => (
               <div key={idx} className="relative group">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full z-20 border-2 border-white">
@@ -113,7 +112,7 @@ const Buildsection = () => {
           </div>
 
           {/* Bottom Feature Cards for Desktop */}
-          <div className="grid md:grid-cols-4 gap-6 mt-20">
+          <div className="grid lg:grid-cols-4 gap-6 mt-20">
             {steps.map((step, idx) => (
               <div key={idx} className="bg-slate-100 p-6 rounded-2xl border border-blue-300 transition-transform hover:-translate-y-1">
                 <ul className="space-y-2">

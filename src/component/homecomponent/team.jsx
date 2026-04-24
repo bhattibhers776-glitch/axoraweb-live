@@ -18,9 +18,9 @@ const Team = () => {
   ];
 
   return (
-    // Max-w-7xl with mx-auto ensures it matches Navbar & Footer alignment exactly
+    // Sirf width logic change ki hai baki aapka original code hai
     <section className="mt-20 w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -30,7 +30,7 @@ const Team = () => {
           </h2>
         </div>
 
-        {/* Team Grid - grid-cols-2 (Mobile) to grid-cols-4 (Desktop) */}
+        {/* Team Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8 justify-items-center">
           {teams.map((team, index) => (
             <div

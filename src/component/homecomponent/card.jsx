@@ -51,51 +51,56 @@ const services = [
 
 const Card = () => {
   return (
-    <section className="w-full flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
-      {/* Width fixed with max-w-7xl to match Navbar */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {services.map((service, idx) => (
-          <div
-            key={idx}
-            className="border border-gray-200 px-5 py-6 rounded-3xl w-full max-w-[380px] group transform transition-all duration-300 hover:-translate-y-3 hover:border-blue-700 hover:bg-gray-50 hover:shadow-2xl"
-          >
-            {/* Original Icon Box with exact hover style */}
-            <div className="w-14 h-14 bg-slate-50 px-4 py-4 m-6 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-blue-400 group-hover:text-white">
-              {service.icon}
-            </div>
+    <section className="w-full bg-white py-12 overflow-hidden font-sans">
+      {/* Exact Width Logic from HeroSection */}
+      <div className="max-w-7xl 2xl:max-w-[1450px] min-[1700px]:max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Grid Container: Increased gap and full width items */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="border border-gray-200 px-6 py-8 rounded-[2rem] w-full group transform transition-all duration-300 hover:-translate-y-3 hover:border-blue-700 hover:bg-gray-50 hover:shadow-2xl flex flex-col h-full"
+            >
+              {/* Icon Box */}
+              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:bg-blue-400 group-hover:text-white mb-6">
+                {service.icon}
+              </div>
 
-            <div className="px-5">
-              <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-              <p className="mt-2 font-serif text-sm text-gray-600">{service.description}</p>
-            </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                <p className="mt-3 font-serif text-sm text-gray-600 leading-relaxed">{service.description}</p>
+                
+                <hr className="border-t-2 border-dotted border-gray-200 my-8" />
 
-            <hr className="border-t-2 border-dotted border-gray-200 mx-5 mt-7" />
-
-            <div className="mt-7 space-y-2">
-              {service.features.map((feature, i) => (
-                <div key={i} className="flex items-start px-5">
-                  <FaCheck className="w-4 h-7 text-blue-600 mt-1 shrink-0" />
-                  <p className="text-sm text-gray-400 px-5 mt-1 font-bold">{feature}</p>
+                <div className="space-y-3">
+                  {service.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-4">
+                      <FaCheck className="w-4 h-4 text-blue-600 mt-1 shrink-0" />
+                      <p className="text-sm text-gray-500 font-bold">{feature}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
 
-            <div className="flex mt-5 px-5 items-center">
-              <button className="text-blue-500 font-bold hover:underline">Learn more</button>
-              <span className="text-blue-600 w-6 font-bold px-3">→</span>
+              <div className="flex mt-8 items-center gap-2 group/btn">
+                <button className="text-blue-500 font-bold hover:underline">Learn more</button>
+                <span className="text-blue-600 font-bold transition-transform group-hover/btn:translate-x-1">→</span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* View All Services Button */}
-      <div className="w-full flex justify-center py-10">
-        <Link to="/services/webdevelop">
-          <button className="flex items-center text-white bg-blue-600 rounded-xl text-xl px-6 py-3 hover:bg-blue-800 transition-colors duration-300 shadow-lg active:scale-95">
-            View All Services
-            <span className="ml-3 font-bold">→</span>
-          </button>
-        </Link>
+        {/* View All Services Button */}
+        <div className="w-full flex justify-center py-10 mt-14">
+          <Link to="/services/webdevelop">
+            <button className="flex items-center text-white bg-blue-600 rounded-xl text-lg px-8 py-4 hover:bg-blue-800 transition-all duration-300 shadow-lg active:scale-95 font-semibold">
+              View All Services
+              <span className="ml-3 font-bold">→</span>
+            </button>
+          </Link>
+        </div>
+
       </div>
     </section>
   );
