@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCheckCircle, FaMagento, FaMailBulk } from "react-icons/fa";
+import { FaCheckCircle, FaMailBulk } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
 
 const Mainsection = () => {

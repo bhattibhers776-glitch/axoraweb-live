@@ -14,7 +14,7 @@ const Tailored = () => {
         </div>
 
         <div className="mt-4 md:mt-0">
-          <a href="#" className="text-blue-600 font-semibold hover:underline">
+        <a href="/" className="text-blue-600 font-semibold hover:underline">
             Learn More →
           </a>
         </div>
