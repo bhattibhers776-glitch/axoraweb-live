@@ -10,6 +10,7 @@ import Featurepj from '../../component/homecomponent/featurepj';
 import Clientsection from '../../component/homecomponent/clientsection';
 import Clientsay from '../../component/servicescomponents/customecomponents/clientsay';
 import FAQ from '../../component/homecomponent/faq';
+import PartnersSection from "../../component/homecomponent/PartnersSection";
 
 function Home() {
   return (
@@ -61,6 +62,7 @@ function Home() {
 
       {/* Page Components */}
       <HeroSection />
+      <PartnersSection />
       <Team />
       <Software />
       <Card />
