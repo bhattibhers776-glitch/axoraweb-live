@@ -16,6 +16,7 @@ import Webdevelop from './pages/sercicespage/componentspages/web-developer';
 import Design from './pages/sercicespage/componentspages/uldesigb';
 import Hosting from './pages/sercicespage/componentspages/hosting';
 import Pricing from './pages/pricinnpage/pricing';
+import QoutePage from './pages/qoutepage/qoutepage';
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
           <Route path="/services/web-developer" element={<Webdevelop />} />
           <Route path="/services/Ux-design" element={<Design />} />
           <Route path="/services/hosting" element={<Hosting />} />
+           <Route path="/qoute" element={<QoutePage />} />
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

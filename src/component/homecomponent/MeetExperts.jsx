@@ -31,28 +31,28 @@ const MeetExperts = () => {
 
   const experts = [
     { 
-      name: "Sibtain Raza", 
+      name: "Ali Hamza", 
       role: "CEO & FOUNDER", 
       desc: "Visionary leader driving the strategic growth and innovation of AppxGlobal, ensuring we deliver world-class digital solutions.",
-      img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      img: "/ali.png" 
     },
     { 
-      name: "Ali Hyder", 
+      name: "Faqeer Hussain", 
       role: "CTO (CHIEF TECHNOLOGY OFFICER)", 
       desc: "Architecting scalable technical infrastructures and leading engineering teams to solve complex digital challenges.",
-      img: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      img: "/faqeerhussain2.png" 
     },
     { 
-      name: "Saad Husnain", 
+      name: "Mubashir", 
       role: "FULL STACK ENGINEER", 
       desc: "Expert in building robust, high-performance web applications with a focus on seamless user experiences and clean code.",
-      img: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      img: "/dev.png" 
     },
     { 
-      name: "Abdullah", 
+      name: "Alisha", 
       role: "SEO & MARKETING EXPERT", 
       desc: "Strategist focused on maximizing digital reach and ROI through data-driven search engine optimization and growth marketing.",
-      img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600" 
+      img: "/alisha.png" 
     }
   ];
 
